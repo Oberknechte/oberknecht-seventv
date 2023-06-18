@@ -22,7 +22,7 @@ export function getUserByTwitchName(sym: string, query: string) {
       (e, r) => {
         if (e || r.errors) return reject(e ?? r.errors);
         
-        let dat = r.body.data;
+        let dat = r.body;
         return resolve(dat);
       }
     );

@@ -47,7 +47,7 @@ export async function searchEmotes(
       (e, r) => {
         if (e || r.errors) return reject(e ?? r.errors);
 
-        let dat = r.body.data;
+        let dat = r.body;
         resolve(dat);
       }
     );
